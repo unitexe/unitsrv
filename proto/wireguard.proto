@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package unit.network.v0;
+
+service Wireguard {
+  rpc GetPublicKey (GetPublicKeyRequest) returns (PublicKey) {}
+}
+
+message GetPublicKeyRequest {}
+
+message PublicKey {
+  string value = 1;
+}
